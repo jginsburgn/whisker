@@ -1,0 +1,11 @@
+<!-- Pass user only -->
+<%- include('header'); %>
+<%- include('components/user-bar', {name: locals.user.name} ); %>
+<div class="third pad-1 centered">
+    <h3>Your current balance is <%= locals.user.getBalance() %></h3>
+    <% for (var i = 0; i < locals.user.transactions.length; ++i) { %>
+        <%- include('components/transaction-item', {transaction: locals.user.transactions[i]}); %>
+    <% } %>
+    <button onclick="loadAddTransaction()">Add Transaction</button>
+    <script src="javascripts/wallet.js"></script>
+</div>

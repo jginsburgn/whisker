@@ -1,0 +1,10 @@
+<div class="third pad-1 centered">
+	<%- include('header'); %>
+	<h2 class="lefted">Login</h2>
+	<input type="email" name="email" placeholder="Enter your email" required>
+	<input type="password" name="password" placeholder="Enter your password" required>
+    <p id="message-holder"><%= locals.message %></p>
+	<button onclick="attemptLogin()">Login</button>
+	<button onclick="loadRegister()">Register instead</button>
+	<script src="javascripts/login.js"></script>
+</div>

@@ -1,0 +1,11 @@
+<%- include('header'); %>
+<%- include('components/user-bar', {name: locals.user.name} ); %>
+<div class="third pad-1 centered">
+    <input type="text" name="title" placeholder="Title">
+    <input type="number" name="amount" placeholder="Amount">
+    <textarea name="notes" placeholder="Notes"></textarea>
+    <br>
+    <button onclick="add()">Add</button>
+    <button onclick="cancel()">Cancel</button>
+    <script src="javascripts/transaction-add.js"></script>
+</div>

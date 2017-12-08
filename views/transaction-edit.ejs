@@ -1,0 +1,12 @@
+<!-- Pass user and transaction to edit -->
+<%- include('header'); %>
+<%- include('components/user-bar', {name: locals.user.name} ); %>
+<div class="third pad-1 centered">
+    <input type="text" name="title" placeholder="<%= locals.transaction.title %>">
+    <input type="number" name="amount" placeholder="<%= locals.transaction.amount %>">
+    <textarea name="notes" placeholder="<%= locals.transaction.notes %>"></textarea>
+    <br>
+    <button onclick="edit(<%- locals.transaction.id %>)">Edit</button>
+    <button onclick="cancel()">Cancel</button>
+    <script src="javascripts/transaction-edit.js"></script>
+</div>
